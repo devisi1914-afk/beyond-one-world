@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulary — Global North / Global South</title>
+<meta name="description" content="An illustrated A–Z of terms around Global North and Global South, linked to their academic sources.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260728113535">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap hero">
+
+    <div class="hero-main">
+      <p class="eyebrow">An illustrated glossary</p>
+      <h1>Beyond<br>One<br>World</h1>
+      <p class="hero-subtitle">A Vocabulary of Transformation</p>
+
+      <div class="hero-rule"></div>
+
+      <p class="intro">
+        From <strong>Abya Yala</strong> to <strong>Zones of Exclusion</strong>, this A–Z gathers
+        concepts that shape how we understand the relationship between humans, culture, and the Earth.
+      </p>
+      <p class="intro">
+        Drawing from decolonial theory, environmental thinking, and design research, the glossary
+        creates a space for multiple forms of knowledge and alternative ways of inhabiting the Earth.
+      </p>
+
+      <div class="hero-rule"></div>
+
+      <p class="intro-note">Every term is traced back to its academic origin.</p>
+
+      <dl class="stats">
+        <div><dt id="stat-terms">–</dt><dd>terms</dd></div>
+        <div><dt id="stat-letters">–</dt><dd>letters live</dd></div>
+        <div><dt>6</dt><dd>sources</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-globe">
+      <span class="hero-star" aria-hidden="true">✳</span>
+
+      <div class="globe-stage">
+        <svg class="orbits" viewBox="0 0 800 800" aria-hidden="true">
+          <g class="orbit-spin">
+            <ellipse cx="400" cy="400" rx="330" ry="330"/>
+            <ellipse cx="400" cy="400" rx="330" ry="150" transform="rotate(-18 400 400)"/>
+            <ellipse cx="400" cy="400" rx="150" ry="330" transform="rotate(-18 400 400)"/>
+            <ellipse cx="400" cy="400" rx="292" ry="292" class="orbit-faint"/>
+          </g>
+          <line class="meridian" x1="400" y1="70" x2="400" y2="730"/>
+        </svg>
+
+        <div class="globe" id="globe-live"></div>
+
+        <ul class="notes">
+          <li class="note note-knowledge"><b>Knowledge</b><span>Many ways<br>of knowing<br>are valid.</span></li>
+          <li class="note note-power"><b>Power</b><span>Structures<br>can be changed.</span></li>
+          <li class="note note-relations"><b>Relations</b><span>Nothing exists<br>in isolation.</span></li>
+          <li class="note note-futures"><b>Futures</b><span>Another world<br>is already<br>here.</span></li>
+          <li class="note note-life"><b>Life</b><span>More than<br>human.</span></li>
+          <li class="note note-care"><b>Care</b><span>To live together<br>is a choice.</span></li>
+        </ul>
+      </div>
+
+      <a class="hero-badge" href="#alphabet" aria-label="Browse the A–Z">
+        <span class="hero-badge-label">Browse<br>A–Z</span>
+        <span class="hero-badge-arrow" aria-hidden="true">↓</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="creed">
+    <div class="wrap creed-inner">
+      <p>We do not seek permission<br>to exist.</p>
+      <p>We create<br>our worlds.</p>
+      <p>Together.</p>
+      <span class="creed-mark" aria-hidden="true">✷</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="section-tabs" aria-label="Sections">
+    <button class="tab-btn is-active" data-tab="alphabet" aria-selected="true">Alphabet</button>
+    <button class="tab-btn" data-tab="stats" aria-selected="false">Statistics</button>
+    <button class="tab-btn" data-tab="sources" aria-selected="false">Sources</button>
+  </nav>
+
+  <div id="tab-alphabet" class="tab-panel">
+    <section class="discovery" aria-label="Reading progress">
+      <div class="disc-top">
+        <div class="disc-count">
+          <span id="disc-found">0</span><span class="disc-of">/ <span id="disc-total">0</span> terms read</span>
+        </div>
+        <div class="disc-actions">
+          <button id="disc-random" class="disc-btn">Surprise me</button>
+          <button id="disc-reset" class="disc-btn is-quiet">Reset</button>
+        </div>
+      </div>
+      <div class="disc-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span id="disc-fill" class="disc-fill"></span>
+        <span class="disc-mark" style="left:25%"></span>
+        <span class="disc-mark" style="left:50%"></span>
+        <span class="disc-mark" style="left:75%"></span>
+      </div>
+      <p class="disc-hint">Open a letter and mark each term once you have read it. Your progress stays on this device.</p>
+      <div id="disc-medals" class="disc-medals"></div>
+    </section>
+
+    <section class="handoff" aria-label="Play on your phone">
+      <button id="flip" class="flip" aria-expanded="false">
+        <span class="flip-inner">
+
+          <span class="flip-face flip-front">
+            <span class="flip-blob" aria-hidden="true"></span>
+            <span class="flip-eyebrow">Take it with you</span>
+            <span class="flip-title">Let’s play</span>
+            <span class="flip-sub">A letter appears. Tap it and learn what it holds.</span>
+            <span class="flip-hint">Tap for the code →</span>
+          </span>
+
+          <span class="flip-face flip-back">
+            <span class="flip-qr" id="qr"></span>
+            <span class="flip-back-text">
+              <span class="flip-eyebrow">Scan to play</span>
+              <span id="qr-url" class="flip-url"></span>
+              <span class="flip-hint">Tap to turn back</span>
+            </span>
+          </span>
+
+        </span>
+      </button>
+
+      <details class="handoff-adv">
+        <summary>Change the address the code points to</summary>
+        <p id="handoff-note" class="handoff-note" hidden></p>
+        <label class="handoff-field">
+          <span>Address your phone should open</span>
+          <input id="handoff-url" type="text" inputmode="url" spellcheck="false" autocomplete="off">
+        </label>
+        <a id="handoff-open" class="handoff-open" href="play.html">Or just play here ↗</a>
+      </details>
+    </section>
+
+    <section id="alphabet" class="alphabet" aria-label="Alphabet">
+      <!-- letter tiles injected by app.js -->
+    </section>
+
+    <section id="wordpanel" class="wordpanel" hidden>
+      <div class="wordpanel-head">
+        <div class="wordpanel-letter" id="wp-letter"></div>
+        <button id="wp-close" class="close-btn" aria-label="Close">✕</button>
+      </div>
+      <div id="wp-cards" class="cards"></div>
+    </section>
+  </div>
+
+  <div id="cursor-tag" class="cursor-tag" aria-hidden="true"><span>Explore</span></div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <span class="toast-mark" id="toast-mark"></span>
+    <span><strong id="toast-title"></strong><em id="toast-body"></em></span>
+  </div>
+
+  <div id="tab-sources" class="tab-panel" hidden>
+    <section id="sources" class="sources">
+      <h2>Sources</h2>
+      <p class="sources-note">The numbers on each term refer to these academic texts. Each one links to the original text.</p>
+      <ol id="sources-list" class="sources-list"></ol>
+    </section>
+  </div>
+
+  <div id="tab-stats" class="tab-panel" hidden>
+    <section class="stats-page">
+      <h2>Statistics</h2>
+      <p class="sources-note">
+        A qualitative concept analysis of the six sources. Every text was read against the same
+        framework, so the profiles can be compared: concepts are grouped, counted, and categorised
+        by frequency using fixed thresholds.
+      </p>
+      <p class="sources-note method-note">
+        <strong>Method.</strong> All frequencies are counted directly from the source PDFs. Running
+        page headers and the reference list are removed before counting, and each concept group is
+        matched by an explicit set of word forms, so no occurrence is counted under two groups.
+        Alongside frequency, each concept records the number of pages it appears on — a concept can
+        be frequent yet confined to one stretch of a text.
+      </p>
+
+      <nav class="stats-level-nav" aria-label="Statistics levels">
+        <button class="level-btn is-active" data-level="glossary">Glossary</button>
+        <button class="level-btn" data-level="source">Source profiles</button>
+        <button class="level-btn" data-level="compare">Comparison</button>
+        <button class="level-btn" data-level="network">Network</button>
+      </nav>
+
+      <!-- ---------- Level 0: the glossary itself ---------- -->
+      <div class="level-panel" data-level-panel="glossary">
+        <h3 class="stats-subhead">Terms per letter</h3>
+        <div class="radial-wrap">
+          <div class="radial-chart-box">
+            <div class="radial-glow" aria-hidden="true"></div>
+            <svg id="radial-letters" viewBox="0 0 400 400"></svg>
+            <div class="radial-center-label">
+              <span id="radial-total">–</span>
+              <span>terms</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="stats-subhead">Terms per source</h3>
+        <div id="stats-sources" class="stat-cards"></div>
+      </div>
+
+      <!-- ---------- Level 1: one source at a time ---------- -->
+      <div class="level-panel" data-level-panel="source" hidden>
+        <div class="source-picker">
+          <label for="stat-source-select">Source</label>
+          <div class="select-shell">
+            <select id="stat-source-select"></select>
+            <span class="select-arrow" aria-hidden="true">▾</span>
+          </div>
+        </div>
+        <div id="source-profile" class="source-profile" aria-live="polite"></div>
+        <div id="word-freq-sections"></div>
+      </div>
+
+      <!-- ---------- Level 2: the six texts against each other ---------- -->
+      <div class="level-panel" data-level-panel="compare" hidden>
+        <div id="compare-sections"></div>
+      </div>
+
+      <!-- ---------- Level 3: concepts as a network ---------- -->
+      <div class="level-panel" data-level-panel="network" hidden>
+        <div id="network-sections"></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Terms, definitions and source mapping from the <em>GEE Global North / Global South</em> Course.</p>
+  </div>
+</footer>
+
+<script src="assets/globe-data.js"></script>
+<script src="globe.js"></script>
+<script src="qr.js?v=20260728113535"></script>
+<script src="data.js?v=20260728113535"></script>
+<script src="app.js?v=20260728113535"></script>
+</body>
+</html>

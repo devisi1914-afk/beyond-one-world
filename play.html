@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#F0EEE7">
+<title>A–Z — Beyond One World</title>
+<meta name="description" content="A letter appears. Tap it and learn what it holds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="play.css">
+</head>
+<body>
+
+<!-- ---------------- start ---------------- -->
+<section id="screen-start" class="screen is-on">
+  <div class="start-blob" aria-hidden="true"></div>
+  <p class="eyebrow">Beyond One World</p>
+  <h1>A–Z</h1>
+  <p class="start-lead">A letter appears. Tap it to see the words it holds — and what they mean.</p>
+  <dl class="start-facts">
+    <div><dt id="fact-terms">–</dt><dd>terms</dd></div>
+    <div><dt id="fact-letters">–</dt><dd>letters</dd></div>
+    <div><dt id="fact-seen">–</dt><dd>opened</dd></div>
+  </dl>
+  <button id="btn-start" class="big-btn">Begin</button>
+  <button id="btn-reset" class="ghost-btn">Start over</button>
+</section>
+
+<!-- ---------------- the letter ---------------- -->
+<section id="screen-letter" class="screen">
+  <header class="mini-hud">
+    <span id="hud-progress" class="hud-progress"></span>
+    <button id="btn-quit" class="quit-btn" aria-label="Back to start">✕</button>
+  </header>
+
+  <button id="letter-card" class="letter-card" aria-label="Open this letter">
+    <span class="letter-blob" aria-hidden="true"></span>
+    <span id="letter-glyph" class="letter-glyph">A</span>
+    <span id="letter-count" class="letter-count"></span>
+  </button>
+
+  <p class="letter-hint">Tap the letter</p>
+</section>
+
+<!-- ---------------- the words ---------------- -->
+<section id="screen-words" class="screen">
+  <header class="words-head">
+    <span id="words-letter" class="words-letter">A</span>
+    <div class="words-meta">
+      <strong id="words-count"></strong>
+      <em id="words-sub"></em>
+    </div>
+    <button id="btn-close" class="quit-btn" aria-label="Back">✕</button>
+  </header>
+
+  <div id="word-list" class="word-list"></div>
+
+  <button id="btn-next" class="big-btn">Next letter</button>
+</section>
+
+<!-- ---------------- done ---------------- -->
+<section id="screen-done" class="screen">
+  <p class="eyebrow">That is the whole alphabet</p>
+  <h1>Done</h1>
+  <p class="start-lead">You opened every letter that holds a word. <span id="done-count"></span></p>
+  <button id="btn-restart" class="big-btn">Go round again</button>
+  <a id="link-home" class="ghost-btn" href="index.html">Back to the glossary</a>
+</section>
+
+<script src="data.js"></script>
+<script src="play.js"></script>
+</body>
+</html>

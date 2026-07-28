@@ -1,0 +1,19 @@
+# The source PDFs are third-party academic texts and are not redistributed here.
+# The Sources tab links to the publishers instead.
+sources/
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# local backups from editing sessions
+*.bak
+
+# scratch
+globe-compare.html
+
+# superseded by the live vector globe (globe.js + assets/globe-data.js)
+assets/globe.png
+assets/globe.svg
