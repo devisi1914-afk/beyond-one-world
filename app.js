@@ -1543,13 +1543,17 @@
     var urlLabel = document.getElementById("qr-url");
     if (!host || !input || typeof QR === "undefined") return;
 
-    var KEY = "bow-play-origin";
+    var KEY = "bow-play-origin-v2";  // v2: v1 could store a wrong sub-path root on project sites
     var isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/i.test(location.hostname);
 
     var stored = null;
     try { stored = window.localStorage.getItem(KEY); } catch (e) {}
 
-    var base = stored || location.origin;
+    // location.origin alone is wrong for a GitHub Pages project site
+    // (username.github.io/repo/), which lives in a subfolder, not at the
+    // domain root — so the current directory has to be kept too.
+    var here = location.origin + location.pathname.replace(/[^/]*$/, "");
+    var base = stored || here;
     input.value = base.replace(/\/$/, "") + "/play.html";
 
     if (isLocal && !stored) {

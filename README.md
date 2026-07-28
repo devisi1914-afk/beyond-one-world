@@ -3,7 +3,7 @@
 An illustrated A–Z glossary of concepts around the Global North / Global South,
 built for the GEE Global North / Global South course.
 
-**Live site:** https://USERNAME.github.io/beyond-one-world/
+**Live site:** https://devisi1914-afk.github.io/beyond-one-world/
 
 ## What is in it
 
